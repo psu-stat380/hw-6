@@ -7,8 +7,8 @@ title-block-style: default
 execute: 
   freeze: true
   cache: true
-format:
-  # html: # comment this line to get pdf
+# format:
+  html: # comment this line to get pdf
   pdf: 
     fig-width: 7
     fig-height: 7
@@ -19,7 +19,7 @@ format:
 ---
 
 ::: {.callout-important style="font-size: 0.8em;"}
-## Due: Mon, May 1, 2023 @ 11:59pm
+## Due: Wed, May 3, 2023 @ 11:59pm
 
 Please read the instructions carefully before submitting your assignment.
 

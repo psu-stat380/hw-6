@@ -13,3 +13,6 @@ rpart.plot
 e1071
 torch
 luz
+tibble
+carData
+car

@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Solutions">
+
+<title>Homework 5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="sol_files/libs/clipboard/clipboard.min.js"></script>
+<script src="sol_files/libs/quarto-html/quarto.js"></script>
+<script src="sol_files/libs/quarto-html/popper.min.js"></script>
+<script src="sol_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="sol_files/libs/quarto-html/anchor.min.js"></script>
+<link href="sol_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="sol_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="sol_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="sol_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="sol_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Homework 5</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p><span style="background-color: yellow;">Solutions</span> </p>
+            </div>
+    </div>
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#question-1" id="toc-question-1" class="nav-link active" data-scroll-target="#question-1">Question 1</a></li>
+  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<p><a href="https://github.com/psu-stat380/hw-4">Link to the Github repository</a></p>
+<hr>
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Due: Tue, Apr 18, 2023 @ 11:59pm
+</div>
+</div>
+<div class="callout-body-container callout-body" style="font-size: 0.8em;">
+<p>Please read the instructions carefully before submitting your assignment.</p>
+<ol type="1">
+<li>This assignment requires you to only upload a <code>PDF</code> file on Canvas</li>
+<li>Don’t collapse any code cells before submitting.</li>
+<li>Remember to make sure all your code output is rendered properly before uploading your submission.</li>
+</ol>
+<p>⚠️ Please add your name to the author information in the frontmatter before submitting your assignment ⚠️</p>
+</div>
+</div>
+<p>In this assignment, we will explore decision trees, support vector machines and neural networks for classification and regression. The assignment is designed to test your ability to fit and analyze these models with different configurations and compare their performance.</p>
+<p>We will need the following packages:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>packages <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"dplyr"</span>, </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">"readr"</span>, </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tidyr"</span>, </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">"purrr"</span>, </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">"broom"</span>,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"magrittr"</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"corrplot"</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"caret"</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rpart"</span>,</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"rpart.plot"</span>,</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"e1071"</span>,</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  <span class="st">"torch"</span>, </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  <span class="st">"luz"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># renv::install(packages)</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(packages, require, <span class="at">character.only=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br><br><br><br></p>
+<hr>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+60 points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prediction of Median House prices</p>
+</div>
+</div>
+<section id="points-1" class="level6">
+<h6 class="anchored" data-anchor-id="points-1">1.1 (2.5 points)</h6>
+<p>The <code>data</code> folder contains the <code>housing.csv</code> dataset which contains housing prices in California from the 1990 California census. The objective is to predict the median house price for California districts based on various features.</p>
+<p>Read the data file as a tibble in R. Preprocess the data such that:</p>
+<ol type="1">
+<li>the variables are of the right data type, e.g., categorical variables are encoded as factors</li>
+<li>all column names to lower case for consistency</li>
+<li>Any observations with missing values are dropped</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">&lt;-</span> <span class="st">"data/housing.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(filename, <span class="at">col_types =</span> <span class="fu">cols</span>())</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(\(x) <span class="fu">is.character</span>(x), as.factor) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="points-2" class="level6">
+<h6 class="anchored" data-anchor-id="points-2">1.2 (2.5 points)</h6>
+<p>Visualize the correlation matrix of all numeric columns in <code>df</code> using <code>corrplot()</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric)) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="at">digits=</span><span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">corrplot</span>(<span class="at">diag=</span>F)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-3" class="level6">
+<h6 class="anchored" data-anchor-id="points-3">1.3 (5 points)</h6>
+<p>Split the data <code>df</code> into <code>df_train</code> and <code>df_split</code> using <code>test_ind</code> in the code below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>test_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df), </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">floor</span>( <span class="fu">nrow</span>(df)<span class="sc">/</span><span class="dv">10</span> ),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace=</span><span class="cn">FALSE</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df_train <span class="ot">&lt;-</span> df[<span class="sc">-</span>test_ind, ]</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>df_test <span class="ot">&lt;-</span> df[test_ind, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="points-4" class="level6">
+<h6 class="anchored" data-anchor-id="points-4">1.4 (5 points)</h6>
+<p>Fit a linear regression model to predict the <code>median_house_value</code> :</p>
+<ul>
+<li><code>latitude</code></li>
+<li><code>longitude</code></li>
+<li><code>housing_median_age</code></li>
+<li><code>total_rooms</code></li>
+<li><code>total_bedrooms</code></li>
+<li><code>population</code></li>
+<li><code>median_income</code></li>
+<li><code>ocean_proximity</code></li>
+</ul>
+<p>Interpret the coefficients and summarize your results.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>lm_fit <span class="ot">&lt;-</span> <span class="fu">lm</span>(median_house_value <span class="sc">~</span> ., df_train)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(lm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = median_house_value ~ ., data = df_train)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-555603  -42318  -10574   28539  772170 
+
+Coefficients:
+                            Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)               -2.185e+06  9.229e+04 -23.677  &lt; 2e-16 ***
+longitude                 -2.585e+04  1.069e+03 -24.185  &lt; 2e-16 ***
+latitude                  -2.461e+04  1.053e+03 -23.375  &lt; 2e-16 ***
+housing_median_age         1.064e+03  4.614e+01  23.069  &lt; 2e-16 ***
+total_rooms               -5.901e+00  8.431e-01  -6.999 2.67e-12 ***
+total_bedrooms             9.795e+01  7.183e+00  13.637  &lt; 2e-16 ***
+population                -3.769e+01  1.127e+00 -33.434  &lt; 2e-16 ***
+households                 5.000e+01  7.755e+00   6.447 1.17e-10 ***
+median_income              3.919e+04  3.579e+02 109.482  &lt; 2e-16 ***
+ocean_proximityINLAND     -4.022e+04  1.834e+03 -21.937  &lt; 2e-16 ***
+ocean_proximityISLAND      1.375e+05  3.439e+04   3.999 6.38e-05 ***
+ocean_proximityNEAR BAY   -2.396e+03  2.020e+03  -1.186  0.23555    
+ocean_proximityNEAR OCEAN  4.530e+03  1.657e+03   2.734  0.00626 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 68700 on 18377 degrees of freedom
+Multiple R-squared:  0.6438,    Adjusted R-squared:  0.6436 
+F-statistic:  2768 on 12 and 18377 DF,  p-value: &lt; 2.2e-16</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-5" class="level6">
+<h6 class="anchored" data-anchor-id="points-5">1.5 (5 points)</h6>
+<p>Complete the <code>rmse</code> function for computing the Root Mean-Squared Error between the true <code>y</code> and the predicted <code>yhat</code>, and use it to compute the RMSE for the regression model on <code>df_test</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>rmse <span class="ot">&lt;-</span> <span class="cf">function</span>(y, yhat) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sqrt</span>(<span class="fu">mean</span>((y <span class="sc">-</span> yhat)<span class="sc">^</span><span class="dv">2</span>))</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>lm_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(lm_fit, df_test)</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  df_test<span class="sc">$</span>median_house_value, </span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  lm_predictions</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 68292.76</code></pre>
+</div>
+</div>
+</section>
+<section id="points-6" class="level6">
+<h6 class="anchored" data-anchor-id="points-6">1.6 (5 points)</h6>
+<p>Fit a decision tree model to predict the <code>median_house_value</code> using the same predictors as in 1.4. Use the <code>rpart()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>rpart_fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(median_house_value <span class="sc">~</span> ., df_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Visualize the decision tree using the <code>rpart.plot()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(rpart_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Report the root mean squared error on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>rpart_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(rpart_fit, df_test)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  df_test<span class="sc">$</span>median_house_value, </span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  rpart_predictions</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 75876.87</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-7" class="level6">
+<h6 class="anchored" data-anchor-id="points-7">1.7 (5 points)</h6>
+<p>Fit a support vector machine model to predict the <code>median_house_value</code> using the same predictors as in 1.4. Use the <code>svm()</code> function and use any kernel of your choice. Report the root mean squared error on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>svm_fit <span class="ot">&lt;-</span> <span class="fu">svm</span>(median_house_value <span class="sc">~</span> ., df_train, <span class="at">kernel=</span><span class="st">"radial"</span>)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>svm_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(svm_fit, df_test)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  df_test<span class="sc">$</span>median_house_value, </span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  svm_predictions</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 56663.75</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-8" class="level6">
+<h6 class="anchored" data-anchor-id="points-8">1.8 (25 points)</h6>
+<p>Initialize a neural network model architecture:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>NNet <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>(p, q1, q2, q3){</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear1 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(p, q1)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear2 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q1, q2)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear3 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q2, q3)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>output <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q3, <span class="dv">1</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>activation <span class="ot">&lt;-</span> <span class="fu">nn_relu</span>()</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x){</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">linear1</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear2</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear3</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">output</span>()</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Fit a neural network model to predict the <code>median_house_value</code> using the same predictors as in 1.4. Use the <code>model.matrix</code> function to create the covariate matrix and <code>luz</code> package for fitting the network with <span class="math inline">\(32, 16, 8\)</span> nodes in each of the three hidden layers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(median_house_value <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="sol_cache/html/unnamed-chunk-13_714ea7d982f8303c76e06fb7b59fbcc8">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>fit_nn <span class="ot">&lt;-</span> NNet <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup</span>(</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">loss =</span> <span class="fu">nn_mse_loss</span>(),</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">optimizer =</span> optim_adam,</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">metrics =</span> <span class="fu">list</span>(</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">luz_metric_rmse</span>()</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_hparams</span>(<span class="at">p =</span> <span class="fu">ncol</span>(M), <span class="at">q1 =</span> <span class="dv">32</span>, <span class="at">q2 =</span> <span class="dv">16</span>, <span class="at">q3 =</span> <span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_opt_hparams</span>(<span class="at">lr =</span> <span class="fl">1e-2</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">list</span>(</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">model.matrix</span>(median_house_value <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_train),</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>      df_train<span class="sc">$</span>median_house_value <span class="sc">%&gt;%</span> as.matrix</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">valid_data =</span> <span class="fu">list</span>(</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">model.matrix</span>(median_house_value <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_test),</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>      df_test<span class="sc">$</span>median_house_value <span class="sc">%&gt;%</span> as.matrix</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">epochs =</span> <span class="dv">100</span>,</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataloader_options =</span> <span class="fu">list</span>(<span class="at">batch_size =</span> <span class="dv">512</span>)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot the results of the training and validation loss and accuracy.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit_nn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Report the root mean squared error on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>nnet_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  fit_nn, </span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">model.matrix</span>(median_house_value <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_test)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> as_array</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="fu">rmse</span>(</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  df_test<span class="sc">$</span>median_house_value, </span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  nnet_predictions</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 73750.36</code></pre>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember to use the <code>as_array()</code> function to convert the predictions to a vector of numbers before computing the RMSE with <code>rmse()</code></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-9" class="level6">
+<h6 class="anchored" data-anchor-id="points-9">1.9 (5 points)</h6>
+<p>Summarize your results in a table comparing the RMSE for the different models. Which model performed best? Why do you think that is?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>predictions <span class="ot">&lt;-</span> <span class="fu">sapply</span>(</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    lm_predictions, </span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    rpart_predictions, </span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    svm_predictions, </span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    nnet_predictions</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">function</span>(x) {</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rmse</span>(df_test<span class="sc">$</span>median_house_value, x)</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> as.data.frame</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(predictions) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"lm"</span>, <span class="st">"rpart"</span>, <span class="st">"svm"</span>, <span class="st">"nnet"</span>)</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(predictions) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"rmse"</span>)</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>predictions <span class="sc">%&gt;%</span></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(rmse) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">round</span>(<span class="at">digits=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>          rmse
+lm    68292.76
+rpart 75876.87
+svm   56663.75
+nnet  73750.36</code></pre>
+</div>
+</div>
+<p><br><br><br><br> <br><br><br><br></p>
+<hr>
+</section>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+50 points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Spam email classification</p>
+</div>
+</div>
+<p>The <code>data</code> folder contains the <code>spam.csv</code> dataset. This dataset contains features extracted from a collection of spam and non-spam emails. The objective is to classify the emails as spam or non-spam.</p>
+<hr>
+<section id="points-11" class="level6">
+<h6 class="anchored" data-anchor-id="points-11">2.1 (2.5 points)</h6>
+<p>Read the data file as a tibble in R. Preprocess the data such that:</p>
+<ol type="1">
+<li>the variables are of the right data type, e.g., categorical variables are encoded as factors</li>
+<li>all column names to lower case for consistency</li>
+<li>Any observations with missing values are dropped</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>filename <span class="ot">&lt;-</span> <span class="st">"data/spambase.csv"</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(filename, <span class="at">col_types =</span> <span class="fu">cols</span>())</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span> </span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate_if</span>(\(x) <span class="fu">is.character</span>(x), as.factor) <span class="sc">%&gt;%</span> </span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="points-12" class="level6">
+<h6 class="anchored" data-anchor-id="points-12">2.2 (2.5 points)</h6>
+<p>Split the data <code>df</code> into <code>df_train</code> and <code>df_split</code> using <code>test_ind</code> in the code below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>test_ind <span class="ot">&lt;-</span> <span class="fu">sample</span>(</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df), </span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">floor</span>( <span class="fu">nrow</span>(df)<span class="sc">/</span><span class="dv">10</span> ),</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">replace=</span><span class="cn">FALSE</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>df_train <span class="ot">&lt;-</span> df[<span class="sc">-</span>test_ind, ]</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>df_test <span class="ot">&lt;-</span> df[test_ind, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Complete the <code>overview</code> function which returns a data frame with the following columns: <code>accuracy</code>, <code>error</code>, <code>false positive rate</code>, <code>true positive rate</code>, between the true <code>true_class</code> and the predicted <code>pred_class</code> for any classification model.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>overview <span class="ot">&lt;-</span> <span class="cf">function</span>(true_class, pred_class){</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  accuracy <span class="ot">&lt;-</span> <span class="fu">mean</span>(true_class <span class="sc">==</span> pred_class)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  error <span class="ot">&lt;-</span> <span class="dv">1</span> <span class="sc">-</span> accuracy</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>  true_positives <span class="ot">&lt;-</span> <span class="fu">sum</span>(true_class <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> pred_class <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>  true_negatives <span class="ot">&lt;-</span> <span class="fu">sum</span>(true_class <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> pred_class <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>  false_positives <span class="ot">&lt;-</span> <span class="fu">sum</span>(true_class <span class="sc">==</span> <span class="dv">0</span> <span class="sc">&amp;</span> pred_class <span class="sc">==</span> <span class="dv">1</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>  false_negatives <span class="ot">&lt;-</span> <span class="fu">sum</span>(true_class <span class="sc">==</span> <span class="dv">1</span> <span class="sc">&amp;</span> pred_class <span class="sc">==</span> <span class="dv">0</span>)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  false_positive_rate <span class="ot">&lt;-</span> false_positives <span class="sc">/</span> (true_positives <span class="sc">+</span> false_negatives)</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  false_negative_rate <span class="ot">&lt;-</span> false_negatives <span class="sc">/</span> (true_positives <span class="sc">+</span> false_negatives)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data.frame</span>(</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>      <span class="at">accuracy =</span> accuracy,</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>      <span class="at">error =</span> error,</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>      <span class="at">false_positive_rate =</span> false_positive_rate,</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>      <span class="at">false_negative_rate =</span> false_negative_rate</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="points-13" class="level6">
+<h6 class="anchored" data-anchor-id="points-13">2.3 (5 points)</h6>
+<p>Fit a logistic regression model to predict the <code>spam</code> variable using the remaining predictors. Report the prediction accuracy on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>glm_fit <span class="ot">&lt;-</span> <span class="fu">glm</span>(spam <span class="sc">~</span> ., df_train, <span class="at">family=</span><span class="fu">binomial</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: glm.fit: fitted probabilities numerically 0 or 1 occurred</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(glm_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+glm(formula = spam ~ ., family = binomial(), data = df_train)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-4.5484  -0.2076   0.0000   0.1090   4.6499  
+
+Coefficients:
+                             Estimate Std. Error z value Pr(&gt;|z|)    
+(Intercept)                -1.695e+00  1.650e-01 -10.276  &lt; 2e-16 ***
+word_freq_1                -4.433e-01  2.508e-01  -1.767 0.077189 .  
+word_freq_2                -1.564e-01  7.563e-02  -2.068 0.038626 *  
+word_freq_3                 8.557e-02  1.171e-01   0.731 0.464975    
+word_freq_4                 2.160e+00  1.627e+00   1.327 0.184470    
+word_freq_5                 5.193e-01  1.024e-01   5.072 3.93e-07 ***
+word_freq_6                 9.131e-01  2.681e-01   3.406 0.000659 ***
+word_freq_7                 2.267e+00  3.431e-01   6.609 3.88e-11 ***
+word_freq_8                 5.656e-01  1.728e-01   3.273 0.001063 ** 
+word_freq_9                 5.621e-01  2.940e-01   1.912 0.055892 .  
+word_freq_10                6.895e-02  7.854e-02   0.878 0.380005    
+word_freq_11               -2.510e-01  3.163e-01  -0.793 0.427508    
+word_freq_12               -1.291e-01  7.773e-02  -1.660 0.096844 .  
+word_freq_13               -1.963e-01  2.528e-01  -0.777 0.437424    
+word_freq_14                1.189e-01  1.492e-01   0.797 0.425631    
+word_freq_15                1.088e+00  7.319e-01   1.487 0.137057    
+word_freq_16                9.588e-01  1.496e-01   6.408 1.48e-10 ***
+word_freq_17                1.015e+00  2.540e-01   3.995 6.46e-05 ***
+word_freq_18                1.745e-01  1.221e-01   1.429 0.153004    
+word_freq_19                9.115e-02  3.685e-02   2.473 0.013386 *  
+word_freq_20                1.625e+00  6.237e-01   2.606 0.009162 ** 
+word_freq_21                2.296e-01  5.594e-02   4.104 4.06e-05 ***
+word_freq_22                1.686e-01  1.732e-01   0.973 0.330437    
+word_freq_23                2.165e+00  4.869e-01   4.446 8.73e-06 ***
+word_freq_24                3.530e-01  1.522e-01   2.320 0.020364 *  
+word_freq_25               -1.861e+00  3.177e-01  -5.859 4.66e-09 ***
+word_freq_26               -9.417e-01  4.444e-01  -2.119 0.034110 *  
+word_freq_27               -8.875e+00  2.035e+00  -4.360 1.30e-05 ***
+word_freq_28                4.120e-01  1.974e-01   2.087 0.036844 *  
+word_freq_29               -3.929e+00  2.388e+00  -1.645 0.099899 .  
+word_freq_30               -5.848e-01  4.440e-01  -1.317 0.187864    
+word_freq_31               -2.186e-01  6.033e-01  -0.362 0.717111    
+word_freq_32                1.662e+00  2.958e+00   0.562 0.574147    
+word_freq_33               -6.347e-01  2.901e-01  -2.188 0.028685 *  
+word_freq_34                7.100e-01  1.541e+00   0.461 0.645045    
+word_freq_35               -2.388e+00  8.348e-01  -2.860 0.004237 ** 
+word_freq_36                9.153e-01  3.218e-01   2.844 0.004452 ** 
+word_freq_37               -7.126e-02  1.915e-01  -0.372 0.709887    
+word_freq_38               -5.514e-01  4.216e-01  -1.308 0.190834    
+word_freq_39               -8.714e-01  4.256e-01  -2.048 0.040607 *  
+word_freq_40               -3.196e-01  3.728e-01  -0.857 0.391270    
+word_freq_41               -4.128e+01  2.769e+01  -1.491 0.135995    
+word_freq_42               -2.440e+00  8.447e-01  -2.888 0.003876 ** 
+word_freq_43               -1.062e+00  7.715e-01  -1.377 0.168644    
+word_freq_44               -1.715e+00  5.771e-01  -2.971 0.002966 ** 
+word_freq_45               -7.973e-01  1.634e-01  -4.880 1.06e-06 ***
+word_freq_46               -1.495e+00  2.815e-01  -5.309 1.10e-07 ***
+word_freq_47               -2.385e+00  1.742e+00  -1.369 0.170854    
+word_freq_48               -3.808e+00  1.648e+00  -2.310 0.020866 *  
+char_freq_1                -1.284e+00  4.691e-01  -2.738 0.006179 ** 
+char_freq_2                -1.531e-01  2.500e-01  -0.613 0.540079    
+char_freq_3                -1.341e+00  1.380e+00  -0.972 0.331200    
+char_freq_4                 2.742e-01  7.720e-02   3.552 0.000382 ***
+char_freq_5                 5.485e+00  7.775e-01   7.056 1.72e-12 ***
+char_freq_6                 2.064e+00  1.141e+00   1.809 0.070501 .  
+capital_run_length_average  8.831e-02  4.618e-02   1.912 0.055823 .  
+capital_run_length_longest  9.313e-03  2.915e-03   3.195 0.001399 ** 
+capital_run_length_total    7.070e-04  2.351e-04   3.008 0.002633 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 5547.4  on 4140  degrees of freedom
+Residual deviance: 1617.6  on 4083  degrees of freedom
+AIC: 1733.6
+
+Number of Fisher Scoring iterations: 13</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>glm_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(glm_fit, df_test, <span class="at">type=</span><span class="st">"response"</span>) <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df_test<span class="sc">$</span>spam, glm_predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  accuracy      error false_positive_rate false_negative_rate
+1 0.923913 0.07608696          0.05319149           0.1329787</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-14" class="level6">
+<h6 class="anchored" data-anchor-id="points-14">2.4 (5 points)</h6>
+<p>Fit a decision tree model to predict the <code>spam</code> variable using the remaining predictors. Use the <code>rpart()</code> function and set the <code>method</code> argument to <code>"class"</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>rpart_fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(spam <span class="sc">~</span> ., df_train, <span class="at">method=</span><span class="st">"class"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Visualize the decision tree using the <code>rpart.plot()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rpart.plot</span>(rpart_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-23-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Report the prediction accuracy on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>rpart_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(rpart_fit, df_test, <span class="at">type=</span><span class="st">"class"</span>) <span class="sc">==</span> <span class="st">"1"</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df_test<span class="sc">$</span>spam, rpart_predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy     error false_positive_rate false_negative_rate
+1 0.8782609 0.1217391          0.08510638            0.212766</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-15" class="level6">
+<h6 class="anchored" data-anchor-id="points-15">2.5 (5 points)</h6>
+<p>Fit a support vector machine model to predict the <code>spam</code> variable using the remaining predictors. Use the <code>svm()</code> function and use any kernel of your choice. Remember to set the <code>type</code> argument to <code>"C-classification"</code> <strong>if you haven’t</strong> already converted <code>spam</code> to be of type <code>factor</code>.</p>
+<div class="cell" data-hash="sol_cache/html/unnamed-chunk-25_a4a633192c062e92dd693881dc11cdef">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>svm_fit <span class="ot">&lt;-</span> <span class="fu">svm</span>(spam <span class="sc">~</span> ., df_train, <span class="at">kernel=</span><span class="st">"radial"</span>, <span class="at">type=</span><span class="st">"C-classification"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Report the prediction accuracy on the test set.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>svm_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(svm_fit, df_test) <span class="sc">==</span> <span class="st">"1"</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df_test<span class="sc">$</span>spam, svm_predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  accuracy      error false_positive_rate false_negative_rate
+1 0.923913 0.07608696          0.06382979           0.1223404</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-16" class="level6">
+<h6 class="anchored" data-anchor-id="points-16">2.6 (25 points)</h6>
+<p>Using the same neural network architecture as in 1.9, fit a neural network model to predict the <code>spam</code> variable using the remaining predictors.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Classification vs.&nbsp;Regression
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that the neural network in 1.9 was a regression model. You will need to modify the neural network architecture to be a classification model by changing the output layer to have a single node with a sigmoid activation function.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>NNet <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>(p, q1, q2, q3){</span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear1 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(p, q1)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear2 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q1, q2)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear3 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q2, q3)</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>output <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q3, <span class="dv">1</span>)</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>activation <span class="ot">&lt;-</span> <span class="fu">nn_relu</span>()</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>sigmoid <span class="ot">&lt;-</span> <span class="fu">nn_sigmoid</span>()</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x){</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">linear1</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear2</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear3</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">output</span>() <span class="sc">%&gt;%</span> self<span class="sc">$</span><span class="fu">sigmoid</span>()</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Use the <code>model.matrix</code> function to create the covariate matrix and <code>luz</code> package for fitting the network with <span class="math inline">\(32, 16, 8\)</span> nodes in each of the three hidden layers.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>M <span class="ot">&lt;-</span> <span class="fu">model.matrix</span>(spam <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="sol_cache/html/unnamed-chunk-29_828ec80ee1a5afc4e370c6af4d496507">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>fit_nn <span class="ot">&lt;-</span> NNet <span class="sc">%&gt;%</span> </span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup</span>(</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">loss =</span> <span class="fu">nn_bce_loss</span>(),</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">optimizer =</span> optim_adam,</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">metrics =</span> <span class="fu">list</span>(</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">luz_metric_accuracy</span>()</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_hparams</span>(<span class="at">p =</span> <span class="fu">ncol</span>(M), <span class="at">q1 =</span> <span class="dv">32</span>, <span class="at">q2 =</span> <span class="dv">16</span>, <span class="at">q3 =</span> <span class="dv">8</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_opt_hparams</span>(<span class="at">lr =</span> <span class="fl">1e-3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">list</span>(</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>      <span class="fu">model.matrix</span>(spam <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_train),</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>      df_train<span class="sc">$</span>spam <span class="sc">%&gt;%</span> as.matrix</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">valid_data =</span> <span class="fu">list</span>(</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a>      <span class="fu">model.matrix</span>(spam <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_test),</span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>      df_test<span class="sc">$</span>spam <span class="sc">%&gt;%</span> as.matrix</span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">epochs =</span> <span class="dv">100</span>,</span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataloader_options =</span> <span class="fu">list</span>(<span class="at">batch_size =</span> <span class="dv">256</span>, <span class="at">shuffle=</span><span class="cn">TRUE</span>)</span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(fit_nn)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-30-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>nnet_predictions <span class="ot">&lt;-</span> <span class="fu">predict</span>(</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  fit_nn, </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">model.matrix</span>(spam <span class="sc">~</span> <span class="dv">0</span> <span class="sc">+</span> ., df_test)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span> as_array <span class="sc">&gt;</span> <span class="fl">0.5</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="fu">overview</span>(df_test<span class="sc">$</span>spam, nnet_predictions)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   accuracy      error false_positive_rate false_negative_rate
+1 0.9456522 0.05434783          0.06914894          0.06382979</code></pre>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-17" class="level6">
+<h6 class="anchored" data-anchor-id="points-17">2.7 (5 points)</h6>
+<p>Summarize your results in a table comparing the accuracy metrics for the different models.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">list</span>(</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  glm_predictions, </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  rpart_predictions, </span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>  svm_predictions, </span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a>  nnet_predictions</span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">lapply</span>(\(x) <span class="fu">overview</span>(df_test<span class="sc">$</span>spam, x)) <span class="sc">%&gt;%</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_rownames</span>(<span class="fu">c</span>(<span class="st">"glm"</span>, <span class="st">"rpart"</span>, <span class="st">"svm"</span>, <span class="st">"nnet"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">accuracy</th>
+<th style="text-align: right;">error</th>
+<th style="text-align: right;">false_positive_rate</th>
+<th style="text-align: right;">false_negative_rate</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">glm</td>
+<td style="text-align: right;">0.9239130</td>
+<td style="text-align: right;">0.0760870</td>
+<td style="text-align: right;">0.0531915</td>
+<td style="text-align: right;">0.1329787</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rpart</td>
+<td style="text-align: right;">0.8782609</td>
+<td style="text-align: right;">0.1217391</td>
+<td style="text-align: right;">0.0851064</td>
+<td style="text-align: right;">0.2127660</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">svm</td>
+<td style="text-align: right;">0.9239130</td>
+<td style="text-align: right;">0.0760870</td>
+<td style="text-align: right;">0.0638298</td>
+<td style="text-align: right;">0.1223404</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">nnet</td>
+<td style="text-align: right;">0.9456522</td>
+<td style="text-align: right;">0.0543478</td>
+<td style="text-align: right;">0.0691489</td>
+<td style="text-align: right;">0.0638298</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>If you were to choose a model to classify spam emails, which model would you choose? Think about the context of the problem and the cost of false positives and false negatives.</p>
+<blockquote class="blockquote">
+<p>…</p>
+</blockquote>
+<p><br><br><br><br> <br><br><br><br></p>
+<hr>
+</section>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+60 points
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Three spirals classification</p>
+</div>
+</div>
+<p>To better illustrate the power of depth in neural networks, we will use a toy dataset called the “Three Spirals” data. This dataset consists of two intertwined spirals, making it challenging for shallow models to classify the data accurately.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+This is a multi-class classification problem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<p>The dataset can be generated using the provided R code below:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>generate_three_spirals <span class="ot">&lt;-</span> <span class="cf">function</span>(){</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="dv">500</span></span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>  noise <span class="ot">&lt;-</span> <span class="fl">0.2</span></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>  t <span class="ot">&lt;-</span> (<span class="dv">1</span><span class="sc">:</span>n) <span class="sc">/</span> n <span class="sc">*</span> <span class="dv">2</span> <span class="sc">*</span> pi</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>  x1 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">sin</span>(t) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise)),</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">sin</span>(t <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi<span class="sc">/</span><span class="dv">3</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise)),</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">sin</span>(t <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> pi<span class="sc">/</span><span class="dv">3</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise))</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>  x2 <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">cos</span>(t) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise)),</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">cos</span>(t <span class="sc">+</span> <span class="dv">2</span> <span class="sc">*</span> pi<span class="sc">/</span><span class="dv">3</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise)),</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>      t <span class="sc">*</span> (<span class="fu">cos</span>(t <span class="sc">+</span> <span class="dv">4</span> <span class="sc">*</span> pi<span class="sc">/</span><span class="dv">3</span>) <span class="sc">+</span> <span class="fu">rnorm</span>(n, <span class="dv">0</span>, noise))</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a>  y <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(</span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">c</span>(</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rep</span>(<span class="dv">0</span>, n), </span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rep</span>(<span class="dv">1</span>, n), </span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>      <span class="fu">rep</span>(<span class="dv">2</span>, n)</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(<span class="fu">tibble</span>(<span class="at">x1=</span>x1, <span class="at">x2=</span>x2, <span class="at">y=</span>y))</span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+<section id="points-19" class="level6">
+<h6 class="anchored" data-anchor-id="points-19">3.1 (5 points)</h6>
+<p>Generate the three spirals dataset using the code above. Plot <span class="math inline">\(x_1\)</span> vs <span class="math inline">\(x_2\)</span> and use the <code>y</code> variable to color the points.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">generate_three_spirals</span>()</span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(</span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  df<span class="sc">$</span>x1, df<span class="sc">$</span>x2,</span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">col =</span> df<span class="sc">$</span>y,</span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">pch =</span> <span class="dv">20</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Define a grid of <span class="math inline">\(100\)</span> points from <span class="math inline">\(-10\)</span> to <span class="math inline">\(10\)</span> in both <span class="math inline">\(x_1\)</span> and <span class="math inline">\(x_2\)</span> using the <code>expand.grid()</code>. Save it as a tibble called <code>df_test</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>grid <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>    <span class="at">x1 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="at">length.out=</span><span class="dv">100</span>),</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">x2 =</span> <span class="fu">seq</span>(<span class="sc">-</span><span class="dv">10</span>, <span class="dv">10</span>, <span class="at">length.out=</span><span class="dv">100</span>)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>df_test <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(grid)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<hr>
+</section>
+<section id="points-20" class="level6">
+<h6 class="anchored" data-anchor-id="points-20">3.2 (10 points)</h6>
+<p>Fit a classification tree model to predict the <code>y</code> variable using the <code>x1</code> and <code>x2</code> predictors, and plot the decision boundary.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a>rpart_fit <span class="ot">&lt;-</span> <span class="fu">rpart</span>(y <span class="sc">~</span> ., df, <span class="at">method=</span><span class="st">"class"</span>)</span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>rpart_classes <span class="ot">&lt;-</span> <span class="fu">predict</span>(rpart_fit, df_test, <span class="at">type=</span><span class="st">"class"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot the decision boundary using the following function:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>plot_decision_boundary <span class="ot">&lt;-</span> <span class="cf">function</span>(predictions){</span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>    df_test<span class="sc">$</span>x1, df_test<span class="sc">$</span>x2, </span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> predictions,</span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch =</span> <span class="dv">0</span></span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    df<span class="sc">$</span>x1, df<span class="sc">$</span>x2,</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">col =</span> df<span class="sc">$</span>y,</span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">pch =</span> <span class="dv">20</span></span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(rpart_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-21" class="level6">
+<h6 class="anchored" data-anchor-id="points-21">3.3 (10 points)</h6>
+<p>Fit a support vector machine model to predict the <code>y</code> variable using the <code>x1</code> and <code>x2</code> predictors. Use the <code>svm()</code> function and use any kernel of your choice. Remember to set the <code>type</code> argument to <code>"C-classification"</code> <strong>if you haven’t</strong> converted <code>y</code> to be of type <code>factor</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a>svm_fit <span class="ot">&lt;-</span> <span class="fu">svm</span>(y <span class="sc">~</span> ., df, <span class="at">kernel=</span><span class="st">"radial"</span>, <span class="at">type=</span><span class="st">"C-classification"</span>)</span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>svm_classes <span class="ot">&lt;-</span> <span class="fu">predict</span>(svm_fit, df_test)</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(svm_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-39-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Instructions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For the next questions, you will need to fit a series of neural networks. In all cases, you can:</p>
+<ul>
+<li>set the number of units in each hidden layer to 10</li>
+<li>set the output dimension <code>o</code> to 3 (remember this is multinomial classification)</li>
+<li>use the appropriate loss function for the problem (<strong>not <code>nn_bce_loss</code></strong>)</li>
+<li>set the number of epochs to <span class="math inline">\(50\)</span></li>
+<li>fit the model using the <code>luz</code> package</li>
+</ul>
+<p>You can use any optimizer of your choice, but you <strong>will need to tune the learning rate for each problem</strong>.</p>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>out_dim <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>test_matrix <span class="ot">&lt;-</span> df_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(x1, x2) <span class="sc">%&gt;%</span> as.matrix</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="points-22" class="level6">
+<h6 class="anchored" data-anchor-id="points-22">3.4 (10 points)</h6>
+<p>Fit a neural network with <strong>1 hidden layer</strong> to predict the <code>y</code> variable using the <code>x1</code> and <code>x2</code> predictors.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a>NN1 <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>(p, q1, o){</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear1 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(p, q1)</span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>output <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q1, o)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>activation <span class="ot">&lt;-</span> <span class="fu">nn_relu</span>()</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x){</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">%&gt;%</span> </span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear1</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">output</span>()</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a>fit_nn1 <span class="ot">&lt;-</span> NN1 <span class="sc">%&gt;%</span> </span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup</span>(</span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">loss =</span> <span class="fu">nn_cross_entropy_loss</span>(),</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">optimizer =</span> optim_adam,</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_hparams</span>(<span class="at">p=</span><span class="dv">2</span>, <span class="at">q1=</span><span class="dv">10</span>, <span class="at">o=</span>out_dim) <span class="sc">%&gt;%</span> </span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_opt_hparams</span>(<span class="at">lr=</span><span class="fl">0.01</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(</span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">list</span>(</span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a>      df <span class="sc">%&gt;%</span> <span class="fu">select</span>(x1, x2) <span class="sc">%&gt;%</span> as.matrix,</span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a>      df<span class="sc">$</span>y <span class="sc">%&gt;%</span> as.integer</span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataloader_options =</span> <span class="fu">list</span>(<span class="at">batch_size =</span> <span class="dv">256</span>, <span class="at">shuffle=</span><span class="cn">TRUE</span>),</span>
+<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">epochs =</span> <span class="dv">50</span>,</span>
+<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">FALSE</span></span>
+<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In order to generate the class predictions, you will need to use the <code>predict()</code> function as follows</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>test_matrix <span class="ot">&lt;-</span> df_test <span class="sc">%&gt;%</span> <span class="fu">select</span>(x1, x2) <span class="sc">%&gt;%</span> as.matrix</span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn1, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-42-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Plot the results using the <code>plot_decision_boundary()</code> function.</p>
+<hr>
+</section>
+<section id="points-23" class="level6">
+<h6 class="anchored" data-anchor-id="points-23">3.5 (10 points)</h6>
+<p>Fit a neural network with <strong>0 hidden layers</strong> to predict the <code>y</code> variable using the <code>x1</code> and <code>x2</code> predictors.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>NN0 <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb56-2"><a href="#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>(p, o){</span>
+<span id="cb56-3"><a href="#cb56-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>output <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(p, o)</span>
+<span id="cb56-4"><a href="#cb56-4" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb56-5"><a href="#cb56-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x){</span>
+<span id="cb56-6"><a href="#cb56-6" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">%&gt;%</span></span>
+<span id="cb56-7"><a href="#cb56-7" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">output</span>()</span>
+<span id="cb56-8"><a href="#cb56-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb56-9"><a href="#cb56-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb56-10"><a href="#cb56-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb56-11"><a href="#cb56-11" aria-hidden="true" tabindex="-1"></a>fit_nn0 <span class="ot">&lt;-</span> NN0 <span class="sc">%&gt;%</span> </span>
+<span id="cb56-12"><a href="#cb56-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup</span>(</span>
+<span id="cb56-13"><a href="#cb56-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">loss =</span> <span class="fu">nn_cross_entropy_loss</span>(),</span>
+<span id="cb56-14"><a href="#cb56-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">optimizer =</span> optim_adam,</span>
+<span id="cb56-15"><a href="#cb56-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb56-16"><a href="#cb56-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_hparams</span>(<span class="at">p=</span><span class="dv">2</span>, <span class="at">o=</span>out_dim) <span class="sc">%&gt;%</span> </span>
+<span id="cb56-17"><a href="#cb56-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_opt_hparams</span>(<span class="at">lr=</span><span class="fl">0.01</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb56-18"><a href="#cb56-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(</span>
+<span id="cb56-19"><a href="#cb56-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">list</span>(</span>
+<span id="cb56-20"><a href="#cb56-20" aria-hidden="true" tabindex="-1"></a>      df <span class="sc">%&gt;%</span> <span class="fu">select</span>(x1, x2) <span class="sc">%&gt;%</span> as.matrix,</span>
+<span id="cb56-21"><a href="#cb56-21" aria-hidden="true" tabindex="-1"></a>      df<span class="sc">$</span>y <span class="sc">%&gt;%</span> as.integer</span>
+<span id="cb56-22"><a href="#cb56-22" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb56-23"><a href="#cb56-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataloader_options =</span> <span class="fu">list</span>(<span class="at">batch_size =</span> <span class="dv">256</span>, <span class="at">shuffle=</span><span class="cn">TRUE</span>),</span>
+<span id="cb56-24"><a href="#cb56-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">epochs =</span> <span class="dv">50</span>,</span>
+<span id="cb56-25"><a href="#cb56-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">FALSE</span></span>
+<span id="cb56-26"><a href="#cb56-26" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot the results using the <code>plot_decision_boundary()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn0, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb57-4"><a href="#cb57-4" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb57-5"><a href="#cb57-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-24" class="level6">
+<h6 class="anchored" data-anchor-id="points-24">3.6 (10 points)</h6>
+<p>Fit a neural network with <strong>3 hidden layers</strong> to predict the <code>y</code> variable using the <code>x1</code> and <code>x2</code> predictors.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>NN3 <span class="ot">&lt;-</span> <span class="fu">nn_module</span>(</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">initialize =</span> <span class="cf">function</span>(p, q1, q2, q3, o){</span>
+<span id="cb58-3"><a href="#cb58-3" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear1 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(p, q1)</span>
+<span id="cb58-4"><a href="#cb58-4" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear2 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q1, q2)</span>
+<span id="cb58-5"><a href="#cb58-5" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>linear3 <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q2, q3)</span>
+<span id="cb58-6"><a href="#cb58-6" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>output <span class="ot">&lt;-</span> <span class="fu">nn_linear</span>(q3, o)</span>
+<span id="cb58-7"><a href="#cb58-7" aria-hidden="true" tabindex="-1"></a>    self<span class="sc">$</span>activation <span class="ot">&lt;-</span> <span class="fu">nn_relu</span>()</span>
+<span id="cb58-8"><a href="#cb58-8" aria-hidden="true" tabindex="-1"></a>  },</span>
+<span id="cb58-9"><a href="#cb58-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">forward =</span> <span class="cf">function</span>(x){</span>
+<span id="cb58-10"><a href="#cb58-10" aria-hidden="true" tabindex="-1"></a>    x <span class="sc">%&gt;%</span> </span>
+<span id="cb58-11"><a href="#cb58-11" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear1</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-12"><a href="#cb58-12" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-13"><a href="#cb58-13" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear2</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-14"><a href="#cb58-14" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-15"><a href="#cb58-15" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">linear3</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-16"><a href="#cb58-16" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">activation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb58-17"><a href="#cb58-17" aria-hidden="true" tabindex="-1"></a>      self<span class="sc">$</span><span class="fu">output</span>()</span>
+<span id="cb58-18"><a href="#cb58-18" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb58-19"><a href="#cb58-19" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb58-20"><a href="#cb58-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb58-21"><a href="#cb58-21" aria-hidden="true" tabindex="-1"></a>fit_nn3 <span class="ot">&lt;-</span> NN3 <span class="sc">%&gt;%</span> </span>
+<span id="cb58-22"><a href="#cb58-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setup</span>(</span>
+<span id="cb58-23"><a href="#cb58-23" aria-hidden="true" tabindex="-1"></a>    <span class="at">loss =</span> <span class="fu">nn_cross_entropy_loss</span>(),</span>
+<span id="cb58-24"><a href="#cb58-24" aria-hidden="true" tabindex="-1"></a>    <span class="at">optimizer =</span> optim_adam,</span>
+<span id="cb58-25"><a href="#cb58-25" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span> </span>
+<span id="cb58-26"><a href="#cb58-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_hparams</span>(<span class="at">p=</span><span class="dv">2</span>, <span class="at">q1=</span><span class="dv">10</span>, <span class="at">q2=</span><span class="dv">10</span>, <span class="at">q3=</span><span class="dv">10</span>, <span class="at">o=</span>out_dim) <span class="sc">%&gt;%</span> </span>
+<span id="cb58-27"><a href="#cb58-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_opt_hparams</span>(<span class="at">lr=</span><span class="fl">0.005</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb58-28"><a href="#cb58-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(</span>
+<span id="cb58-29"><a href="#cb58-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">list</span>(</span>
+<span id="cb58-30"><a href="#cb58-30" aria-hidden="true" tabindex="-1"></a>      df <span class="sc">%&gt;%</span> <span class="fu">select</span>(x1, x2) <span class="sc">%&gt;%</span> as.matrix,</span>
+<span id="cb58-31"><a href="#cb58-31" aria-hidden="true" tabindex="-1"></a>      df<span class="sc">$</span>y <span class="sc">%&gt;%</span> as.integer</span>
+<span id="cb58-32"><a href="#cb58-32" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb58-33"><a href="#cb58-33" aria-hidden="true" tabindex="-1"></a>    <span class="at">dataloader_options =</span> <span class="fu">list</span>(<span class="at">batch_size =</span> <span class="dv">256</span>, <span class="at">shuffle=</span><span class="cn">TRUE</span>),</span>
+<span id="cb58-34"><a href="#cb58-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">epochs =</span> <span class="dv">50</span>,</span>
+<span id="cb58-35"><a href="#cb58-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">verbose =</span> <span class="cn">FALSE</span></span>
+<span id="cb58-36"><a href="#cb58-36" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Plot the results using the <code>plot_decision_boundary()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb59-2"><a href="#cb59-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn3, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb59-3"><a href="#cb59-3" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb59-4"><a href="#cb59-4" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb59-5"><a href="#cb59-5" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-46-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<hr>
+</section>
+<section id="points-25" class="level6">
+<h6 class="anchored" data-anchor-id="points-25">3.7 (5 points)</h6>
+<p>What are the differences between the models? How do the decision boundaries change as the number of hidden layers increases?</p>
+<blockquote class="blockquote">
+<p>The decision boundary becomes more adaptive and nonlinear</p>
+</blockquote>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>))</span>
+<span id="cb60-2"><a href="#cb60-2" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb60-3"><a href="#cb60-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn0, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-4"><a href="#cb60-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-5"><a href="#cb60-5" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb60-6"><a href="#cb60-6" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb60-7"><a href="#cb60-7" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb60-8"><a href="#cb60-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn1, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-9"><a href="#cb60-9" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-10"><a href="#cb60-10" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb60-11"><a href="#cb60-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb60-12"><a href="#cb60-12" aria-hidden="true" tabindex="-1"></a><span class="fu">plot_decision_boundary</span>(</span>
+<span id="cb60-13"><a href="#cb60-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">predict</span>(fit_nn3, test_matrix) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-14"><a href="#cb60-14" aria-hidden="true" tabindex="-1"></a>      <span class="fu">torch_argmax</span>(<span class="dv">2</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb60-15"><a href="#cb60-15" aria-hidden="true" tabindex="-1"></a>      as_array</span>
+<span id="cb60-16"><a href="#cb60-16" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="sol_files/figure-html/unnamed-chunk-47-1.png" class="img-fluid" width="960"></p>
+</div>
+</div>
+<blockquote class="blockquote">
+<p>The decision tree struggles to adapt to the nonlinearity in the spiral, since it tries to partition the input space into rectangles. The SVM with the radial kernel adapts to the nonlinearity well, but chooses “0” as the base class, as illustrated by the black region in the plot. The neural network progressively becomes better suited for the task, as the number of hidden layers increases.</p>
+</blockquote>
+<hr>
+<div class="hidden" data-unless-format="pdf">
+<div style="page-break-after: always;"></div>
+</div>
+<p><br><br><br><br> <br><br><br><br></p>
+<hr>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Session Information
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Print your <code>R</code> session information using the following command</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>R version 4.2.2 (2022-10-31)
+Platform: x86_64-conda-linux-gnu (64-bit)
+Running under: Storage
+
+Matrix products: default
+BLAS/LAPACK: /gpfs/group/hvt5139/default/tools/mambaforge/lib/libopenblasp-r0.3.21.so
+
+locale:
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
+
+attached base packages:
+[1] stats     graphics  grDevices datasets  utils     methods   base     
+
+other attached packages:
+ [1] luz_0.3.1        torch_0.9.0      e1071_1.7-13     rpart.plot_3.1.1
+ [5] rpart_4.1.19     caret_6.0-94     lattice_0.20-45  ggplot2_3.4.1   
+ [9] corrplot_0.92    magrittr_2.0.3   broom_1.0.4      purrr_1.0.1     
+[13] tidyr_1.3.0      readr_2.1.4      dplyr_1.1.0     
+
+loaded via a namespace (and not attached):
+ [1] nlme_3.1-162         fs_1.6.1             lubridate_1.9.2     
+ [4] bit64_4.0.5          progress_1.2.2       tools_4.2.2         
+ [7] backports_1.4.1      utf8_1.2.3           R6_2.5.1            
+[10] colorspace_2.1-0     nnet_7.3-18          withr_2.5.0         
+[13] tidyselect_1.2.0     prettyunits_1.1.1    processx_3.8.0      
+[16] bit_4.0.5            compiler_4.2.2       cli_3.6.0           
+[19] labeling_0.4.2       scales_1.2.1         callr_3.7.3         
+[22] proxy_0.4-27         stringr_1.5.0        digest_0.6.31       
+[25] rmarkdown_2.20       coro_1.0.3           pkgconfig_2.0.3     
+[28] htmltools_0.5.4      parallelly_1.35.0    fastmap_1.1.0       
+[31] rlang_1.0.6          farver_2.1.1         generics_0.1.3      
+[34] jsonlite_1.8.4       vroom_1.6.1          ModelMetrics_1.2.2.2
+[37] Matrix_1.5-3         Rcpp_1.0.10          munsell_0.5.0       
+[40] fansi_1.0.4          lifecycle_1.0.3      stringi_1.7.12      
+[43] pROC_1.18.0          yaml_2.3.7           MASS_7.3-58.3       
+[46] plyr_1.8.8           recipes_1.0.5        grid_4.2.2          
+[49] parallel_4.2.2       listenv_0.9.0        crayon_1.5.2        
+[52] splines_4.2.2        hms_1.1.2            zeallot_0.1.0       
+[55] knitr_1.42           ps_1.7.2             pillar_1.8.1        
+[58] future.apply_1.10.0  reshape2_1.4.4       codetools_0.2-19    
+[61] stats4_4.2.2         glue_1.6.2           evaluate_0.20       
+[64] data.table_1.14.8    renv_0.16.0-53       vctrs_0.5.2         
+[67] tzdb_0.3.0           foreach_1.5.2        gtable_0.3.1        
+[70] future_1.32.0        xfun_0.37            gower_1.0.1         
+[73] prodlim_2019.11.13   class_7.3-21         survival_3.5-5      
+[76] timeDate_4022.108    tibble_3.1.8         iterators_1.0.14    
+[79] hardhat_1.2.0        lava_1.7.2.1         timechange_0.2.0    
+[82] globals_0.16.2       ellipsis_0.3.2       ipred_0.9-14        </code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

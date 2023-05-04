@@ -1,0 +1,261 @@
+---
+title: "Homework 6 (Optional)"
+author: "[Solutions]{style='background-color: yellow;'}"
+toc: true
+title-block-banner: true
+title-block-style: default
+execute: 
+  freeze: true
+  cache: true
+# format:
+  html: # comment this line to get pdf
+  pdf: 
+    fig-width: 7
+    fig-height: 7
+---
+
+[Link to the Github repository](https://github.com/psu-stat380/hw-6)
+
+---
+
+::: {.callout-important style="font-size: 0.8em;"}
+## Due: Wed, May 3, 2023 @ 11:59pm
+
+Please read the instructions carefully before submitting your assignment.
+
+1. This assignment requires you to only upload a `PDF` file on Canvas
+1. Don't collapse any code cells before submitting. 
+1. Remember to make sure all your code output is rendered properly before uploading your submission.
+
+⚠️ Please add your name to the author information in the frontmatter before submitting your assignment ⚠️
+:::
+
+
+In this assignment, we will perform various tasks involving principal component analysis (PCA), principal component regression, and dimensionality reduction.
+
+We will need the following packages:
+
+
+```{R, message=FALSE, warning=FALSE, results='hide'}
+packages <- c(
+  "tibble",
+  "dplyr", 
+  "readr", 
+  "tidyr", 
+  "purrr", 
+  "broom",
+  "magrittr",
+  "corrplot",
+  "report",
+  "car"
+)
+# renv::install(packages)
+sapply(packages, require, character.only=T)
+```
+
+<br><br><br><br>
+---
+
+## Question 1
+::: {.callout-tip}
+## 70 points
+Principal component anlaysis and variable selection
+:::
+
+###### 1.1 (5 points)
+
+
+The `data` folder contains a `spending.csv` dataset which is an illustrative sample of monthly spending data for a group of $5000$ people across a variety of categories. The response variable, `income`, is their monthly income, and objective is to predict the `income` for a an individual based on their spending patterns.
+
+Read the data file as a tibble in R. Preprocess the data such that:
+
+1. the variables are of the right data type, e.g., categorical variables are encoded as factors
+2. all column names to lower case for consistency
+3. Any observations with missing values are dropped
+
+```{R}
+path <- "data/spending.csv"
+
+df <- read_csv(path) %>% 
+  na.omit()
+
+df %>% head() %>% knitr::kable()
+```
+
+---
+
+###### 1.2 (5 points)
+
+Visualize the correlation between the variables using the `corrplot()` function. What do you observe? What does this mean for the model?
+
+```{R}
+df %>%
+  keep(is.numeric) %>%
+  cor() %>%
+  corrplot()
+```
+
+---
+
+###### 1.3 (5 points)
+
+Run a linear regression model to predict the `income` variable using the remaining predictors. Interpret the coefficients and summarize your results. 
+
+
+```{R}
+model1 <- lm(income ~ ., df)
+model1 %>% summary()
+```
+
+> For a given predictor, the coefficient represents the change in the response variable for a unit change in the predictor, holding all other predictors constant. For example, the coefficient for `groceries` is $0.07$. This means that for a unit increase in `groceries` expenditure, the expected `income` increases by $0.07$, _holding all other predictors constant_.
+
+---
+
+###### 1.3 (5 points)
+
+Diagnose the model using the `vif()` function. What do you observe? What does this mean for the model?
+
+```{R}
+model1 %>% vif()
+```
+
+> The coefficients and their significance in `model1` are not reliable because of the high multicollinearity between the predictors. This is evident from the high VIF values for the predictors.
+
+---
+
+###### 1.4 (5 points)
+
+Perform PCA using the `princomp` function in R. Print the summary of the PCA object.
+
+```{R}
+pca <- df %>%
+  select(-income) %>%
+  princomp(cor = T)
+
+summary(pca)
+```
+
+---
+
+###### 1.5 (5 points)
+
+Make a screeplot of the proportion of variance explained by each principal component. How many principal components would you choose to keep? Why?
+
+```{R}
+plot(pca, type="l")
+```
+
+> I would choose to keep the first 4 principal components because they explain $99.8\%$ of the variance and correspond to the "elbow" in the screeplot.
+
+---
+
+###### 1.6 (5 points)
+
+By setting any factor loadings below $0.2$ to $0$, summarize the factor loadings for the principal components that you chose to keep. 
+
+```{R}
+clean_loadings <- ifelse(
+  abs(pca$loadings[, 1:4]) < 0.1,
+  0,
+  round(pca$loadings[, 1:4], 2)
+) %>%
+  as.data.frame()
+```
+
+
+Visualize the factor loadings. 
+
+
+```{R}
+clean_loadings %>% 
+  as.matrix() %>% 
+  t() %>%
+  corrplot()
+```
+
+---
+
+###### 1.7 (15 points)
+
+Based on the factor loadings, what do you think the principal components represent? 
+
+Provide an interpreation for each principal component you chose to keep.
+
+> By choosing 4 latent variables to explain $99.8\%$ of the variance, we can interpret them as follows:
+
+> 1. **Apparel and Accessories Spending:** 
+> 
+>   This latent variable represents spending on clothing, shoes, accessories, jewelry, and watches.
+>
+> 2. **Technology Spending:** 
+> 
+>   This latent variable captures spending on electronics, smartphones, tablets, laptops, desktops, audio equipment, cameras, video games, and software.
+> 
+> 3. **Food and Beverage Spending:** 
+> 
+>   This latent variable represents spending on groceries, meat, seafood, dairy products, fruits, vegetables, snacks, beverages, alcohol, fast food, restaurant meals, coffee shops, and food delivery.
+> 
+> 4. **Entertainment and Travel Spending:** 
+> 
+>   This latent variable captures spending on books, magazines, movies, music, streaming services, sports equipment, gym memberships, outdoor activities, travel, accommodation, car rentals, and public transportation.
+> 
+
+---
+
+###### 1.8 (10 points)
+
+Create a new data frame with the original response variable `income` and the principal components you chose to keep. Call this data frame `df_pca`.
+
+```{R}
+df_pca <- predict(pca, df) %>%
+  as_tibble() %>%
+  select(1:4) %>%
+  mutate(income = df[["income"]])
+```
+
+Fit a regression model to predict the `income` variable using the principal components you chose to keep. Interpret the coefficients and summarize your results. 
+
+```{R}
+model2 <- lm(income ~ . , df_pca)
+```
+
+Compare the results of the regression model in 1.3 and 1.9. What do you observe? What does this mean for the model?
+
+```{R}
+model2 %>% summary()
+
+model2 %>% vif()
+```
+
+
+---
+
+###### 1.10 (10 points)
+
+Based on your interpretation of the principal components from Question 1.7, provide an interpretation of the regression model in Question 1.9.
+
+> The regression model in **Q1.9** is a linear combination of the 4 latent variables we identified in **Q1.7**. The coefficients represent the change in the response variable for a unit change in the latent variable, holding all other latent variables constant. For example, the coefficient for `Comp.1` is $13.33$. This means that for a unit increase in `Apparel and Accessories spending`, the expected `income` increases by $13.33$, _holding all other latent variables constant_.
+
+
+---
+
+
+:::{.hidden unless-format="pdf"}
+\pagebreak
+:::
+
+<br><br><br><br>
+<br><br><br><br>
+---
+
+
+
+::: {.callout-note collapse="true"}
+## Session Information
+
+Print your `R` session information using the following command
+
+```{R}
+sessionInfo()
+```
+:::
